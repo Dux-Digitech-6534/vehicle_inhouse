@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-08 00:04:27.995886",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "from_townproject",
+  "to_townproject",
+  "machine_type"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "from_townproject",
+   "fieldtype": "Link",
+   "label": "From Town/Project",
+   "options": "Town At Project"
+  },
+  {
+   "fieldname": "to_townproject",
+   "fieldtype": "Link",
+   "label": "To Town/Project",
+   "options": "Town At Project"
+  },
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Select",
+   "label": "Machine Type"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-10 09:19:36.449958",
+ "modified_by": "ritesh.sharma@duxdigitech.com",
+ "module": "Vehicle Inhouse",
+ "name": "Machine Transfer VI",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

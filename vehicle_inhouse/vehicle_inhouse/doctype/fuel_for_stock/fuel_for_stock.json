@@ -1,0 +1,329 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FS-{##}",
+ "creation": "2026-04-04 12:57:34.560148",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rejection_reason",
+  "section_break_lpbi",
+  "fuel_entry_type",
+  "company",
+  "warehouse",
+  "date",
+  "types_of_fuel",
+  "column_break_wdvj",
+  "fuel_station_town_name",
+  "quantity",
+  "rateltr_ffs",
+  "amount",
+  "supplier_name",
+  "upload_proof_of_purchase_section",
+  "upload_invoice__invoice_copy",
+  "column_break_jdak",
+  "upload_fuel_station_proof__fuel_station_receipt",
+  "section_break_irfj",
+  "payment_to_be_done",
+  "column_break_szsb",
+  "upload_payment_image",
+  "payable_amount",
+  "payment_receipt_section",
+  "upload_payment_image_column",
+  "image_yiwk",
+  "receipt",
+  "column_break_jyzr",
+  "attach_image_foqr",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lpbi",
+   "fieldtype": "Section Break",
+   "label": "Fuel Stock Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fuel for Stock",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fuel_station_town_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Town/Project Name",
+   "options": "Town At Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "types_of_fuel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Types of Fuel",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wdvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upload_proof_of_purchase_section",
+   "fieldtype": "Section Break",
+   "label": "Upload Proof of Purchase"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "upload_invoice__invoice_copy",
+   "fieldtype": "Attach Image",
+   "label": "Upload Invoice / Invoice Copy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jdak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "upload_fuel_station_proof__fuel_station_receipt",
+   "fieldtype": "Attach Image",
+   "label": "Upload Fuel Station Proof / Fuel Station Receipt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_irfj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_to_be_done",
+   "fieldtype": "Check",
+   "label": "Payment to be Done"
+  },
+  {
+   "fieldname": "column_break_szsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.payment_to_be_done==1;\n",
+   "fieldname": "upload_payment_image",
+   "fieldtype": "Attach Image",
+   "label": "Upload QR code"
+  },
+  {
+   "depends_on": "eval:doc.payment_to_be_done==1;\n",
+   "fieldname": "payable_amount",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "Payable Amount"
+  },
+  {
+   "fieldname": "payment_receipt_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Receipt"
+  },
+  {
+   "fieldname": "upload_payment_image_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_yiwk",
+   "fieldtype": "Image",
+   "options": "attach_image_foqr"
+  },
+  {
+   "fieldname": "column_break_jyzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_image_foqr",
+   "fieldtype": "Attach Image",
+   "label": "Upload payment image",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Rejected'",
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "receipt",
+   "fieldtype": "HTML",
+   "label": "Receipt",
+   "width": "25"
+  },
+  {
+   "default": "Drum",
+   "fieldname": "fuel_entry_type",
+   "fieldtype": "Select",
+   "label": "Fuel Entry Type",
+   "options": "Drum\nVehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "rateltr_ffs",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Link",
+   "label": "Supplier Name",
+   "mask": 1,
+   "options": "Supplier",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "upload_payment_image",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-16 12:05:02.109120",
+ "modified_by": "Administrator",
+ "module": "Vehicle Inhouse",
+ "name": "Fuel for Stock",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Demo - Peety Cash Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Demo - Peety Cash Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Demo- Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "fuel_entry_type",
+ "translated_doctype": 1
+}

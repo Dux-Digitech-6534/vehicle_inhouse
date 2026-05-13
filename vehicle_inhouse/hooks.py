@@ -250,3 +250,33 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+
+
+
+
+            #  MAIN CODE OF 20/4/26 
+
+
+doc_events = {
+    "Fuel for Stock": {
+       "after_insert": "vehicle_inhouse.api.send_fuel_approval_mail",
+    },
+    "Fuel Distribution": {
+        "on_workflow_action": "vehicle_inhouse.fuel_distribution.doctype.fuel_distribution.fuel_distribution.on_workflow_action_handler"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

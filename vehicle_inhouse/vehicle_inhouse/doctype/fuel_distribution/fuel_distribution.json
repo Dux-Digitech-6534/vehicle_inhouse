@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {##}",
+ "creation": "2025-09-16 17:18:54.351022",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fuel_stock_details_section",
+  "fd_date",
+  "fd_town_project",
+  "town__project",
+  "column_break_dasj",
+  "available_stock_ltr",
+  "fd_petrol_in_stock",
+  "fuel_distribution_to_vehicle_section",
+  "fd_vehicle_name",
+  "reading_status",
+  "vehicle_reading_km",
+  "last_reading_km",
+  "company",
+  "warehouse",
+  "column_break_yolc",
+  "fd_fuel_type",
+  "issued_quantity_ltr",
+  "amended_from",
+  "supplier_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "fuel_stock_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fuel Stock Details"
+  },
+  {
+   "fieldname": "available_stock_ltr",
+   "fieldtype": "Data",
+   "label": "Diesel In Stock (Ltr)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fuel_distribution_to_vehicle_section",
+   "fieldtype": "Section Break",
+   "label": "Fuel Distribution to Vehicle"
+  },
+  {
+   "fieldname": "issued_quantity_ltr",
+   "fieldtype": "Float",
+   "label": "Issued Quantity (Ltr)"
+  },
+  {
+   "fieldname": "column_break_dasj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yolc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fd_town_project",
+   "fieldtype": "Link",
+   "label": "Town / Project Name",
+   "options": "Town At Project"
+  },
+  {
+   "fetch_from": "fd_town_project.display_name",
+   "fieldname": "town__project",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Town / Project"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fuel Distribution",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "fd_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "fd_petrol_in_stock",
+   "fieldtype": "Data",
+   "label": "Petrol In Stock (Ltr)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fd_fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "Petrol\nDiesel"
+  },
+  {
+   "fetch_from": "fd_vehicle.vehicle_display_name",
+   "fieldname": "fd_vehicle_name",
+   "fieldtype": "Link",
+   "label": "Vehicle Name",
+   "options": "Vehicle Details"
+  },
+  {
+   "default": "Working",
+   "fieldname": "reading_status",
+   "fieldtype": "Select",
+   "label": "Reading Status",
+   "options": "Working\nNot Working"
+  },
+  {
+   "fieldname": "vehicle_reading_km",
+   "fieldtype": "Float",
+   "label": "Vehicle Reading (KM)"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier Name",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "last_reading_km",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Last Reading (KM)",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-16 22:18:32.064394",
+ "modified_by": "Administrator",
+ "module": "Vehicle Inhouse",
+ "name": "Fuel Distribution",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Demo- Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "town__project",
+ "translated_doctype": 1
+}

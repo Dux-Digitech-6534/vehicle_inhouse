@@ -1,0 +1,12 @@
+<h3>Fuel Stock Approval Required</h3>
+
+<p><b>Document:</b> {{ doc.name }}</p>
+<p><b>Town:</b> {{ doc.fuel_station_town_name }}</p>
+<p><b>Quantity:</b> {{ doc.quantity }}</p>
+<p><b>Fuel Type:</b> {{ doc.types_of_fuel }}</p>
+
+<br>
+
+<p>Please review and approve/reject this request.</p>
+
+<a href="{{ doc.get_url() }}">👉 Open Document</a>

@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {##}",
+ "creation": "2025-09-26 10:19:44.669382",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zmsy",
+  "amended_from",
+  "tffv_vehicle_name",
+  "tffv_quantity",
+  "vehicle"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zmsy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Test fuel for Vehicle",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "tffv_vehicle_name",
+   "fieldtype": "Link",
+   "label": "Vehicle Name",
+   "options": "Vehicle Details"
+  },
+  {
+   "fieldname": "tffv_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "tffv_vehicle_name.vehicle_display_name",
+   "fieldname": "vehicle",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Vehicle"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-26 10:26:05.753935",
+ "modified_by": "ritesh.sharma@duxdigitech.com",
+ "module": "Vehicle Inhouse",
+ "name": "Test fuel for Vehicle",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vehicle"
+}

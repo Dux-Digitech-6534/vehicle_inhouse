@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FS - {##} ",
+ "creation": "2025-09-16 16:22:29.291077",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fuel_storage_details_section",
+  "fuel_stock_town_project",
+  "fuel_stock_fuel_storage",
+  "fs_petrol",
+  "fs_title_field"
+ ],
+ "fields": [
+  {
+   "fieldname": "fuel_storage_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fuel Storage Details"
+  },
+  {
+   "fieldname": "fuel_stock_town_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Town / Project Name",
+   "options": "Town At Project",
+   "unique": 1
+  },
+  {
+   "fieldname": "fuel_stock_fuel_storage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Diesel",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "fuel_stock_town_project.display_name",
+   "fieldname": "fs_title_field",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Town / Project"
+  },
+  {
+   "fieldname": "fs_petrol",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Petrol",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-07 23:48:10.583291",
+ "modified_by": "ritesh.sharma@duxdigitech.com",
+ "module": "Vehicle Inhouse",
+ "name": "Fuel Stock",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "fs_title_field",
+ "translated_doctype": 1
+}

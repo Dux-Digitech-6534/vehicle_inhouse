@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-03 15:35:52.842371",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8txu",
+  "date",
+  "vehicle_reading",
+  "vendor_name",
+  "invoice_number",
+  "total_repairing_amount",
+  "invoice_attachment",
+  "remark",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8txu",
+   "fieldtype": "Section Break",
+   "label": "Add Maintenance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "vehicle_reading",
+   "fieldtype": "Float",
+   "label": "Vehicle Reading"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Int",
+   "label": "Invoice Number"
+  },
+  {
+   "fieldname": "total_repairing_amount",
+   "fieldtype": "Int",
+   "label": "Total Repairing Amount"
+  },
+  {
+   "fieldname": "invoice_attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Invoice Attachment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Long Text",
+   "label": "Remark"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-03 16:25:52.662220",
+ "modified_by": "Administrator",
+ "module": "Vehicle Inhouse",
+ "name": "Maintenance Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

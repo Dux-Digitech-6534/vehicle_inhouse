@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:VE-{##}",
+ "creation": "2025-12-04 15:23:03.382870",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_town_name",
+  "vehicle_type",
+  "make",
+  "owncompany",
+  "column_break_rfug",
+  "model",
+  "license_plate",
+  "vehicle_display_name",
+  "employee_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_town_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project/Town",
+   "options": "Town At Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "Bike\nCar\nScooter\nDumper\nTruck\nPickup\nTractor\nBackhoe Loader\nHydra Crane\nExcavator\nTipper\nTransit Mixer\nTanker\nMixer Machine\nGenerator\nMachine\nWater Pump",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "owncompany",
+   "fieldtype": "Select",
+   "label": "Own/Company",
+   "options": "OWN\nCOMPANY"
+  },
+  {
+   "fieldname": "column_break_rfug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "label": "License Plate"
+  },
+  {
+   "fieldname": "vehicle_display_name",
+   "fieldtype": "Data",
+   "label": "Vehicle Display Name "
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "options": "User"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-11 10:29:18.824721",
+ "modified_by": "Administrator",
+ "module": "Vehicle Inhouse",
+ "name": "Vehicle Details",
+ "naming_rule": "Expression (old style)",
+ "owner": "ritesh.sharma@duxdigitech.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "make,license_plate,vehicle_type",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vehicle_display_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1,
+ "translated_doctype": 1
+}

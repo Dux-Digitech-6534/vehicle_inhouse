@@ -1,0 +1,32 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.docstatus == 1",
+ "condition_type": "Python",
+ "creation": "2026-04-01 22:37:48.047924",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Fuel for Stock",
+ "enabled": 0,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>Fuel Stock Approval Required</h3>\n\n<p><b>Document:</b> {{ doc.name }}</p>\n<p><b>Town:</b> {{ doc.fuel_station_town_name }}</p>\n<p><b>Quantity:</b> {{ doc.quantity }}</p>\n<p><b>Fuel Type:</b> {{ doc.types_of_fuel }}</p>\n\n<br>\n\n<p>Please review and approve/reject this request.</p>\n\n<a href=\"{{ doc.get_url() }}\">\ud83d\udc49 Open Document</a>",
+ "message_type": "HTML",
+ "minutes_offset": 0,
+ "modified": "2026-04-13 11:58:51.396013",
+ "modified_by": "Administrator",
+ "module": "Vehicle Inhouse",
+ "name": "Fuel Stock Approval Mail",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Fuel Stock Approvar"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Fuel Stock Approval Required - {{ doc.name }}"
+}
