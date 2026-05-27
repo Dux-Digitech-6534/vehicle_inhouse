@@ -127,10 +127,10 @@
   {
    "fieldname": "supplier_name",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Supplier Name",
-   "options": "Supplier",
-   "reqd": 1
+   "options": "Supplier"
   },
   {
    "fieldname": "company",
@@ -151,7 +151,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-16 22:18:32.064394",
+ "modified": "2026-05-18 14:36:09.635342",
  "modified_by": "Administrator",
  "module": "Vehicle Inhouse",
  "name": "Fuel Distribution",

@@ -9,6 +9,7 @@
   "rejection_reason",
   "section_break_lpbi",
   "fuel_entry_type",
+  "last_reading_km",
   "company",
   "warehouse",
   "date",
@@ -160,6 +161,7 @@
   {
    "fieldname": "attach_image_foqr",
    "fieldtype": "Attach Image",
+   "hidden": 1,
    "label": "Upload payment image",
    "permlevel": 1
   },
@@ -214,6 +216,12 @@
    "mask": 1,
    "options": "Supplier",
    "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "last_reading_km",
+   "fieldtype": "Float",
+   "label": "Last Reading (KM)"
   }
  ],
  "grid_page_length": 50,
@@ -221,7 +229,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-16 12:05:02.109120",
+ "modified": "2026-05-16 10:16:13.985419",
  "modified_by": "Administrator",
  "module": "Vehicle Inhouse",
  "name": "Fuel for Stock",
